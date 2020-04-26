@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script type='text/javascript'>
+
+    // while
+    var a = 0;
+    while(a <= 10){
+      document.write(a + '\n')
+      a++;
+    }
+    document.write('<br/>')
+
+    // for( var 변수정의; 언제까지; 실행)
+      // 실행 뒤에는 ; 쓰지 않는다! 
+    for(var b=10; b>=0; b--){
+      document.write(b + '\n')
+    }
+    document.write('<br/>')
+
+    // --c vs c-- 
+    for(var c=10; c>=0; --c){
+      document.write(c +'\n')
+    }
+
+    // i++ vs ++i 
+    var i = 0 ; 
+    alert('i = 0 , i++ : alert -> ++ ' );
+    alert(i++);
+    alert(i);
+
+    var e = 0 ; 
+    alert('e = 0 , ++e : ++ -> alert ' );
+    alert(++e );
+  </script>
+</body>
+</html>
