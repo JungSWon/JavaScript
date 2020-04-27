@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script type="text/javascript">
+    
+    var grades = {'A':10, "B":5, "C":9};
+
+    var students = {};
+    students['AA'] = 10;
+    students['BB'] = 5;
+    students['CC'] = 9;
+
+    document.write(grades['A'], students['AA'], '<br/>') 
+    document.write(grades.B, students.BB,'<br/>') 
+    document.write(students['C'+'C'],'<br/>') 
+    // students.'C'+'C'; 는 신텍스에러
+
+    // 객체(Object)는 순서가 없다. (배열 array는 순서가 있다)
+    for( key in students){
+      document.write(key,' : ',students[key], "<br/>" )
+    }
+
+    for(obj in grades){
+      document.write('<li>',obj, ' : ', grades[obj],"</li>")
+    }
+
+    // 객체지향 프로그래밍 
+    var objs ={
+      'list' : {"A":10, "B":5, "C":9},
+      'show' : function(){
+        alert('hello world');
+      },
+      'showthis' : function(){
+        for (var i in this.list){
+          alert(this.list[i]);
+        }
+      }
+    }
+    document.write(objs['list']['A'],'<br/>')
+
+
+  </script>
+
+  <button onclick="objs['show']()"> objs['show']() </button>
+  <button onclick="objs.showthis()"> objs['showthis']() </button>
+</body>
+</html>

@@ -19,7 +19,9 @@
     };
     
     CallName(member);
-
+    document.write('<br/>')
+    
+    
     // 배열추가
     member.push('newmember'); // 요소 맨뒤 추가
     member = member.concat(['new','member']); // 배열 = 배열.추가([새배열])
@@ -27,10 +29,29 @@
     member.splice(1,0,'splicemember'); // 인덱스 지정 추가 
     console.log(member);
     CallName(member);
-
+    document.write('<br/>')
+    
 
     // 배열 제거 
-    
+    document.write('shift => ',member.shift(), '<br/>') // Arr.shift(); = 맨 앞 데이터 
+    document.write('pop => ',member.pop(), '<br/>') // Arr.pop(); = 맨 뒤 데이터 
+    document.write('<br/>')
+
+
+    // 배열 정렬
+    member.sort();
+    CallName(member);
+    document.write('<br/>')
+
+    member.reverse();
+    CallName(member);
+    document.write('<br/>')
+
+    member.reverse();
+    CallName(member);
+    document.write('<br/>')
+
+
 
 
   </script>

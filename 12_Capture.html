@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+
+    
+    // https://regexper.com/   : 정규표현식을 시각화 해주는 도구
+    // https://regexr.com/     : 정규표현식 빌더 
+      // ( ) : 그룹 
+      // \w : 문자
+      // +  : 수량자 = 하나 이상
+      // \s : space = 공백 
+    
+    var pattern = /(\w+)\s(\w+)/;
+    var result = 'coding everybody'.replace(pattern, "$2, $1!!"); 
+    // parrten에 해당하는 문제를 "$2, $1!!"로 치환하겠다 
+      // = "$2 두번째그룹 + $1 첫번째그룹"
+    console.log(result)
+
+
+    
+  </script>
+</body>
+</html>
