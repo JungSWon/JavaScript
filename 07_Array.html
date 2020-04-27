@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script type="text/javascript">
+    
+    var member = ['swon','onandon','anonymous']
+    alert(member[0]);
+    
+    // length, index 
+    function CallName(names){
+      for(var i = 0; i < names.length; i++){
+        document.write(names[i].toUpperCase() + '<br/>' );
+      }
+    };
+    
+    CallName(member);
+
+    // 배열추가
+    member.push('newmember'); // 요소 맨뒤 추가
+    member = member.concat(['new','member']); // 배열 = 배열.추가([새배열])
+    member.unshift('firstmem'); //요소 맨앞 추가
+    member.splice(1,0,'splicemember'); // 인덱스 지정 추가 
+    console.log(member);
+    CallName(member);
+
+
+    // 배열 제거 
+    
+
+
+  </script>
+</body>
+</html>
