@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+
+    // 함수 
+    function a(){return true};
+    var b = function(){return true};
+
+    // 메소드 : 객체 안에 정의된 함수 
+    c = { d :function(){} };
+
+
+    
+    // 함수는 값이므로 다른 함수의 인자로 전달될 수 있음
+    function cal(func,num){
+      return func(num)
+    }
+
+    function increase(num){
+      return num+1
+    }
+
+    function decrease(num){
+      return num-1 
+    }
+
+    document.write(cal(increase,1));
+    document.write(cal(decrease,1));
+
+  </script>
+</body>
+</html>

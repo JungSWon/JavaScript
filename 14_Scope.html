@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    var vscope = 'global';
+    function fscope(){
+        var vscope = 'local';
+    }
+    fscope();
+    alert(vscope);
+
+
+    var vscope2 = 'global';
+    function fscope2(){
+        vscope2 = 'local';
+    }
+    fscope2();
+    alert(vscope2);
+
+
+    var vscope3 = 'global';
+    function fscope3(){
+        var vscope3 = 'local';
+        vscope3 = 'local';
+    }
+    fscope3();
+    alert(vscope3);
+
+
+    function a(){
+      var i = 0 ;
+    }
+    for(var i= 0; i < 5; i++){
+      a();
+      document.write(i)
+    }
+
+  </script>
+</body>
+</html>

@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    // 전역변수 사용하기
+    MYAPP = {}
+    MYAPP.calculator = {
+        'left' : null,
+        'right' : null
+    }
+    MYAPP.coordinate = {
+        'left' : null,
+        'right' : null
+    }
+    MYAPP.calculator.left = 10;
+    MYAPP.calculator.right = 20;
+    function sum(){
+        return MYAPP.calculator.left + MYAPP.calculator.right;
+    }
+    document.write(sum());
+
+
+    // 전역변수를 지역변수화 하기 
+      // 익명함수화
+    (function(){
+    var MYAPP = {}
+    MYAPP.calculator = {
+        'left' : null,
+        'right' : null
+    }
+    MYAPP.coordinate = {
+        'left' : null,
+        'right' : null
+    }
+    MYAPP.calculator.left = 10;
+    MYAPP.calculator.right = 20;
+    function sum(){
+        return MYAPP.calculator.left + MYAPP.calculator.right;
+    }
+    document.write(sum());
+    }())
+
+
+    for(var i = 0; i<3; i++){
+      var name = 'for문 안에서 지정된 변수는 전역에서 부를수있다.'
+    }
+    document.write(name)
+
+
+    // static scope
+    var i = 5;
+    function a(){
+      var i = 10;
+      b();
+    }
+    function b(){
+      document.write(i); 
+      // b()가 사용될 때 가 아니라, 정의될 때의 전역변수가 사용된다.
+      // 정적 유효범위 
+    }
+    a();
+
+
+  </script>
+</body>
+</html>
