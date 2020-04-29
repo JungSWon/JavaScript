@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    // arguments: 함수에서 인자관련 정보를 담고있는 객체
+    // 사용방법은 배열과 비슷하다 
+    function sum(){
+      var i, _sum = 0;
+      // arguments.length = 사용자가 전달한 인자 수
+      for(i=0; i<arguments.length; i++){
+        document.write(i+ ' : ' +arguments[i] +'<br/>');
+        _sum += arguments[i];
+      }
+      return _sum;
+    }
+    document.write('result : ' + sum(1,2,3,4));
+
+    function one(){
+      console.log(
+        'one.length : ', one.length, // 함수지정 인자 수 
+        'arguments.length : ', arguments.length // 실제 들어온 인자 수
+      );
+    }
+    one('val1','val2')
+
+  </script>
+</body>
+</html>

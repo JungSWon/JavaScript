@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    function factory_movie(title){
+      // 내부함수 생성시 외부함수의 지역변수(ex.인자)에 접근할 수 있다.
+      return { // 객체에 소속된 내부함수(메소드)
+        get_title : function(){
+          return title;
+        },
+        set_title : function(_title){
+          title = _title
+        }
+      }
+    }
+    ghost = factory_movie('Ghost_in_the_shell')
+    matrix = factory_movie('Matrix')
+    document.write( matrix,'<br/>')
+
+    document.write(ghost.get_title(),'<br/>') 
+    ghost.set_title('newtitle_GhostInTheShell')
+    document.write(ghost.get_title())
+
+    // 함수 내 지역변수를 임의로 바꿀 수 없기 때문에(=프라이빗하므로)
+    // 안전하게 저장,수정될 수 있다.  
+
+
+
+  </script>
+</body>
+</html>

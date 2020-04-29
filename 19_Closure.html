@@ -1,0 +1,59 @@
+!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    //외부함수, 내부함수 
+    function outter(){
+      var title = 'find variable'
+      function inner(){
+        // 내부함수는 외부함수의 지역변수에 접근가능하다
+        alert(title);
+      }
+      inner();
+    }
+    outter();
+
+    // 외부함수 실행 후 외부함수 소멸 후에도,
+      // 내부함수는 외부함수의 변수에 접근할 수 있다. 
+    function outter2(){
+      var title2 = 'find vari'
+      return function(){
+        alert(title2);
+      }
+    }
+    inner2 = outter2(); // 외부함수 실행 
+    inner2(); // 내부함수 실행
+
+    // Closure 사용시 하기 쉬운 실수 
+    var arr = []
+    for(var i = 0; i < 5; i++){
+      arr[i] = function(){
+        return i;
+        }
+      }
+      for (var index in arr){
+        console.log(arr[index]());
+      }
+      // console : 5 5 5 5 5
+
+      // 내부함수가 외부함수의 지역변수에 접근할 수 있으므로
+      // 함수가 만들어지는 시점의 i값을 id라는 지역변수로 갖게 되므로 
+      // 위/아래 함수 결과 확인하기 
+      var arr2 = []
+      for(var i = 0; i < 5; i++){
+        arr[i] = function(id){
+          return id;
+        }(i);
+      }
+      for(var idx in arr){
+        console.log(arr[idx]);
+      }
+      // console : 0 1 2 3 4
+  </script> 
+</body>
+</html>

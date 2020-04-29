@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    // 객체는 속성을 갖고있다. 
+      // 그 속성이 값이면 : property 
+      // 그 속성이 함수면 : method 
+    
+    // apply메소드 호출하기 
+    function sum(arg1,arg2){
+      return arg1+arg2
+    }
+    console.log(sum.apply) // function apply(){ [native code] } 
+    console.log(sum.apply(null, [4,2]) ) //6
+
+
+    // apply를 왜 쓰는가 ? 
+    o1 = {val1:1, val2:2, val3:3}
+    o2 = {v1:10, v2:50, v3:100, v4:25}
+    function sum(){
+      var _sum = 0;
+      for(name in this){
+        _sum += this[name];
+      }
+      return _sum;
+    }
+    console.log(sum.apply(o1)) //6
+    console.log(sum.apply(o2)) //185
+    // 함수.apply(인자)
+      // 함수 안에 this를 정의하는 것과 같다 => var this = 인자;
+      
+  </script>
+</body>
+</html>
