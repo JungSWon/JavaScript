@@ -1,7 +1,3 @@
-console.log('a' < 'b')
-console.log('a' > 'A')
-console.log('z' > 'A')
-
-at = 'bweefSAAAFDS'
-t = ['1','f','s','3','A']
-console.log(t.sort());
+a = [1,2,3]
+var q= a[0], w= a[1], e=a[2];
+console.log(a.slice(0,1))
