@@ -1,1 +1,2 @@
-console.log(3-2 == true)
+var a = ''+352
+console.log( a[1])
