@@ -1,0 +1,3 @@
+../03_01_VanillaJS-by-JeongWhan/1-vanila/js/views/View.js [24]
+
+this.el.dispatchEvent(evt)

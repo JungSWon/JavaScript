@@ -1,0 +1,11 @@
+../03_01_VanillaJS-by-JeongWhan/1-vanila/js/models/HistoryModel.js [14]
+
+return Promise.resolve(this.data)
+
+../03_01_VanillaJS-by-JeongWhan/1-vanila/js/models/KeywordModel.js [12]
+
+    return new Promise(res => {
+      setTimeout(() => {
+        res(this.data)
+      }, 200)
+    })
