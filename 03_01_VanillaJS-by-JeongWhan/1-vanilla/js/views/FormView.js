@@ -1,4 +1,4 @@
-import View from '/View.js'
+import View from './View.js'
 
 // 디버깅용
 const tag = '[formView]'
@@ -7,10 +7,8 @@ const FormView = Object.create(View)
 
 // setup 메소드 만들기 : html의 el을 받아서 내부적으로 속성을 갖도록 함 
 FormView.setup = function(el){
-  // /View.js에서 View.init(el) 함수를 만들어 놨다
-  this.init(el)
-  // el 찾아서 정의  
-  this.inputEl = el.querySelector('[type=text]')
+  this.init(el) // /View.js에서 View.init(el) 함수를 만들어 놨다
+  this.inputEl = el.querySelector('[type=text]') // el 찾아서 정의  
   this.resetEl = el.querySelector('[type=reset]')
 
   // resetEl을 숨김 처리하기 위한 함수 실행 
