@@ -1,3 +1,5 @@
+import FormView from '../views/FormView.js'
+
 // 디버깅을 위함 
 const tag = '[MainController]'
 
@@ -5,5 +7,6 @@ const tag = '[MainController]'
 export default {
   init() {
     console.log(tag, 'init()')
+    FormView.setup(document.querySelector('form'))
   }
 } 

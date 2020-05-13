@@ -4,6 +4,7 @@ const tag = '[View]'
 
 // ES6의 모듈패턴을 사용하여 export default로 객체를 익스포트한다. 
 export default {
+  // el 생성 
   init(el) {
     if (!el) throw el
     this.el = el
