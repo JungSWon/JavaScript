@@ -17,4 +17,16 @@ console.log( o.contain('soowon')) // true
 console.log( a.contain('qqq')); // false 
 
 
-//
+// 그러나 
+// Object 확장의 위험!! 35챕터로 넘어가서 확인하자 
+
+    // 미리보기 : 출력결과 확인 
+for(name in o){
+    console.log(name)
+}
+
+console.log(Object.keys(a))
+
+for(name in a){
+    console.log(name)
+}
