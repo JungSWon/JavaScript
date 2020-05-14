@@ -22,14 +22,17 @@ FormView.setup = function(el){
   }
 
   FormView.bindEvents = function(){
+    this.on('submit', e => e.preventDefault())
     this.inputEl.addEventListener('keyup', e => this.onKeyup(e))
   }
   
   FormView.onKeyup = function (e) {
+    e.preventDefault()
     const enter = 13
     this.showResetBtn(this.inputEl.value.length) // length가 있을 경우에는 true로 인자 넘겨질 예정 
     if (e.keyCode !== enter) return
     // FormView 는 검색결과를 보여주지 않아도 된다. 
+    e.preventDefault()
     this.emit('@submit', { input: this.inputEl.value })
     // MainController에게 검색어를 주면 
     // MainController는 검색어를 ResultView로 전달해줄 예정 
