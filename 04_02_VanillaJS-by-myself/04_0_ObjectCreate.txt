@@ -1,3 +1,0 @@
-../03_01_VanillaJS-by-JeongWhan/1-vanila/js/views/FormView.js [6]
-
-Object.create(View)
