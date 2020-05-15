@@ -1,16 +1,15 @@
 const todoForm = document.querySelector(".js-todoForm")
 const todoInput = todoForm.querySelector('.todo-input')
 const todoList = document.querySelector('.js-todoList')
+const savedList = JSON.parse(localStorage.getItem('todos'))
 
-// function saveTodo(val){
-//   const savedList = localStorage.getItem('todos')
-//   const newList = [];
-//   if (savedList === null ){
-//     newList = JSON.parse(savedList);
-//   }
-//   newList.push(val)
-//   localStorage.setItem('todos',stringify(newList))
-// }
+function saveTodo(val){
+  if (savedList === null ){
+    localStorage.setItem('todos',JSON.stringify(new Array))
+  }
+  savedList.push(val)
+  localStorage.setItem('todos',JSON.stringify(savedList))
+}
 
 function paintTodo(val){
   console.log(val)
@@ -28,16 +27,15 @@ function handleSubmit(e){
   e.preventDefault();
   const val = todoInput.value
   paintTodo(val)
-  // saveTodo(val)
+  saveTodo(val)
   todoInput.value = ''
 }
 
 function todoLoad(){
-  const todos = localStorage.getItem('todos')
-  if(todos !== null){
-    // todos.forEach(element => {
-    //   paintTodo(element)
-    // });
+  if(savedList !== null){
+    savedList.forEach(element => {
+      paintTodo(element)
+    });
   }else{
   }
 }
