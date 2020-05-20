@@ -8,8 +8,7 @@ export default class API {
     this.setHTML();
   }
   
-
-  temp_fetchCall(e){
+  fetchCall(e){
     console.log(e.target)
     fetch(e.target.innerText)
     .then( res => console.log('?') )
@@ -17,7 +16,7 @@ export default class API {
     .catch(alert('error'))
   }
 
-  fetchCall(){
+  t_fetchCall(){
     fetch('https://jsonplaceholder.typicode.com/todos/1')
       .then(res => res.json())
       .then( json => {
@@ -27,16 +26,15 @@ export default class API {
       }).catch(alert('err'))
   }
 
-  temp_jsonCall(){
+  temo_jsonCall(){
     fetch('https://jsonplaceholder.typicode.com/photos')
     .then(res => res.json())
     .then(json => {
       for(var i = 0; i < 30 ; i++){
-        //   <img src="" alt="" srcset="">
         const imgEl = document.createElement('img')
         imgEl.setAttribute('src',json[i].url)
         this.resDiv.appendChild(imgEl)
-        console.log(json[i].url)
+        console.log(json[i])
       }
     })
   }
@@ -44,12 +42,13 @@ export default class API {
   jsonCall(){
     fetch('https://jsonplaceholder.typicode.com/photos')
     .then(res => {
-      if(res.ok){res.json()}
-      throw new Error('NOT OK');
+      if(!res.ok){return res.json()}
+      else{
+        throw new Error('NOT OK');
+      }
     })
     .then(json => {
       for(var i = 0; i < 30 ; i++){
-        //   <img src="" alt="" srcset="">
         const imgEl = document.createElement('img')
         imgEl.setAttribute('src',json[i].url)
         this.resDiv.appendChild(imgEl)
@@ -58,17 +57,6 @@ export default class API {
     }).catch(err => alert(err.message))
   }
 
-  fetchError(){
-    fetch('CALL').then( res=> {
-      if(res.ok) { console.log('success') }
-      throw new Error('Network response was not ok.');
-    }).then(function(myBlob) { 
-      var objectURL = URL.createObjectURL(myBlob); 
-      myImage.src = objectURL; 
-    }).catch(function(error) {
-      console.log('There has been a problem with your fetch operation: ', error.message);
-    });
-  }
 
   setHTML(){
     const APIDiv = document.createElement('div')

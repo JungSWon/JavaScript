@@ -11,7 +11,7 @@ export default class App {
     target.appendChild(modal.dom)
 
     target.addEventListener('sendVal', e => {
-      modal.showModal(e.detail);
+      modal.handleModal(e.detail);
     });
 
     const api = new API();
