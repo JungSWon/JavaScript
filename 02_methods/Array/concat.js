@@ -8,3 +8,4 @@ res = arr.concat(arr2,arr3)
 
 console.log(res) //[ 1, 2, 3, 1, 2, 3, 4, 5, 6 ]
 console.log(arr) // [1, 2, 3]
+
