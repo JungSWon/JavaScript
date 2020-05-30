@@ -1,3 +1,5 @@
+#  METHODS LIST
+
 > https://opentutorials.org/course/50
 
 ##  String
