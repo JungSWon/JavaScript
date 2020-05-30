@@ -8,7 +8,7 @@ console.log(arr,arrPop)
 // arrPop은 arr.length를 의미 
 
 arr2 = [1,2,3,4]
-arrShift = arr2.unshift("ADD")
-console.log(arr2,arrShift)
-// [ 'ADD', 1, 2, 3, 4 ] 5 
+arrUnshift = arr2.unshift("UNSHIFT")
+console.log(arr2,arrUnshift)
+// [ 'UNSHIFT', 1, 2, 3, 4 ] 5 
 // arrShift도 arr.length를 의미 
