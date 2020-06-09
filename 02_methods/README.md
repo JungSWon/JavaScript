@@ -28,9 +28,9 @@
 - [x] reverse
 - [x] shift
 - [x] slice
-- [ ] sort
+- [x] sort
 - [x] splice
-- [ ] toString
+- [x] toString
 - [x] unshift
 - [ ] valueOf
 
