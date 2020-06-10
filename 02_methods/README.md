@@ -32,7 +32,7 @@
 - [x] splice
 - [x] toString
 - [x] unshift
-- [ ] valueOf
+- [x] valueOf
 
 ## Math
 abs
