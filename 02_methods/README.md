@@ -35,24 +35,24 @@
 - [x] valueOf
 
 ## Math
-abs
-acos
-asin
-atan
-atan2
-ceil
-cos
-exp
-floor
-log
-max
-min
-pow
-random
-round
-sin
-aqrt
-tan
+- [] abs
+- [] acos
+- [] asin
+- [] atan
+- [] atan2
+- [] ceil
+- [] cos
+- [] exp
+- [] floor
+- [] log
+- [] max
+- [] min
+- [] pow
+- [] random
+- [] round
+- [] sin
+- [] aqrt
+- [] tan
 
 ## Number
 toExponential
