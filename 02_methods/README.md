@@ -35,7 +35,7 @@
 - [x] valueOf
 
 ## Math
-- [] abs
+- [x] abs
 - [] acos
 - [] asin
 - [] atan
