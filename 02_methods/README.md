@@ -40,7 +40,7 @@
 - [] asin
 - [] atan
 - [] atan2
-- [] ceil
+- [x] ceil
 - [] cos
 - [] exp
 - [] floor
