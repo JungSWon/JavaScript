@@ -43,8 +43,8 @@
 - [x] ceil
 - [] cos
 - [] exp
-- [] floor
-- [] log
+- [x] floor
+- [x] log
 - [] max
 - [] min
 - [] pow
