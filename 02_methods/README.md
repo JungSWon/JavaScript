@@ -45,8 +45,8 @@
 - [] exp
 - [x] floor
 - [x] log
-- [] max
-- [] min
+- [x] max
+- [x] min
 - [] pow
 - [] random
 - [] round
