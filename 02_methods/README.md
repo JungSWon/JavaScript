@@ -47,8 +47,8 @@
 - [x] log
 - [x] max
 - [x] min
-- [] pow
-- [] random
+- [x] pow
+- [x] random
 - [] round
 - [] sin
 - [] aqrt
