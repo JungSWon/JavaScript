@@ -49,9 +49,9 @@
 - [x] min
 - [x] pow
 - [x] random
-- [] round
+- [x] round
 - [] sin
-- [] aqrt
+- [x] aqrt
 - [] tan
 
 ## Number
