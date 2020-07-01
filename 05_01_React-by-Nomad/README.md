@@ -26,3 +26,22 @@
 
 ## Why React? 
 
+- 페이스북이 만들고 관리
+- 웬만한 회사들이 사용
+  - 에어비앤비, 넷플릭스, 스포티파이, 슬랙 등등 
+- 압도적 인기 
+  - https://2019.stateofjs.com/front-end-frameworks/ 
+  - 그리고 계속 상승 중 
+  - 여러 인기요인 
+    - Elegant programming style & pattern 
+    - Rich Package ecosystem
+    - Well - setablished option
+    - Good doc
+    - Fast Perfom 
+    - Powerfull dev tooling 
+    - etc.. 
+
+- 압도적 커뮤니티
+  - 튜토리얼, 컴포넌트 등 
+- 자바스크립트의 라이브러리이므로, 자바스크립트 실력도 함께 향상  
+
