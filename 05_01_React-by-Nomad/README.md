@@ -2,24 +2,6 @@
 
 > 2020.07.01 
 
-##  환경설정 
-
-- `node -v`  설치 확인
-- `npm -v` 설치 확인 ( 보통 node와 같이 자동 설치 됨 )
-- `git --version` 설치 확인 
-- `npm install npx -g`  npx 설치
-- IDE 
-  - VSC (무료) 
-  - intelliJ (유료)
-  - 외 JS , React 를 지원하는 에디터
-
-##  사전지식 
-
-- CSS/HTML
-  - div, span, flexbox, display block, background color 가 뭔지 안다면 OK
-- 약간의 JS 
-  - function, variable, class 가 뭔지 안다면 OK
-
 ## Why React? 
 
 - 페이스북이 만들고 관리
@@ -41,9 +23,71 @@
   - 튜토리얼, 컴포넌트 등 
 - 자바스크립트의 라이브러리이므로, 자바스크립트 실력도 함께 향상  
 
+##  What is React Native ?
+
+### App개발의 3가지 방법 
+
+1. 완전 Native 
+   - Swift / Objective-c 로 iOS App 개발 with Xcode
+   - Java / Kotlin 으로 Android App 개발 with Android Studio
+2. 앱 기반 웹 뷰를 만들기 : 하이브리드앱
+   - 간단한 웹사이트 개발하여 Cordova / PhoneGap로 앱껍데기 씌우기
+   - HTML, CSS, JS만으로 개발 가능 
+   - 저예산, 반응형 웹앱 개발 가능 
+3. React Native 
+   - React가 Javascript로 작성된 메세지를 iOS, Android 네이티브 엔진에 전달 
+   -  `import {StyleSheet, Text, View} from "react-native";` 에서 `Text` 와 `View`가 바로 그 브릿지 역할을 하는 중추
+   - 많은 데이터가 오고갈 경우 브릿지 부하로 앱이 느려질 수 도 있다.
+   - 그러므로 SNS 컨텐츠(사진, 프로필, 코멘트 등) 앱에는 최적화되어 있지만 
+   - 3D, Video, VR 게임 등을 다루는 앱에는 부적합하다.
+     - 코드를 최적화하는데 시간이 너무 오래 걸리기 때문에 
+
+##  환경설정 공통 
+
+- `node -v`  설치 확인
+- `npm -v` 설치 확인 ( 보통 node와 같이 자동 설치 됨 )
+- `git --version` 설치 확인 
+- IDE 
+  - VSC (무료) 
+  - intelliJ (유료)
+  - 외 JS , React 를 지원하는 에디터
+
+## 환경설정 A
+
+> React JS 웹 개발을 위한 환경설정 
+
+- `npm install npx -g`  npx 설치
+
+##  환경설정 B 
+
+> React Native 앱 개발을 위한 환경설정  
+
+- IDE 
+  - 시뮬레이터 
+    - **안드로이드 스튜디오**  : Linux, Window용
+    - **Xcode** : Mac OS용
+  - **expo**
+    -  시뮬레이터를 PC에 설치하지 않아도 expo를 통해 모바일 디바이스에서 시뮬레이션 할 수 있다
+    - [IOS expo app 설치](https://apps.apple.com/kr/app/expo-client/id982107779) / [Android expo app 설치](https://play.google.com/store/apps/details?id=host.exp.exponent&hl=ko)
+  - **expo client**
+    - `npm install -g expo-cli` 개발환경에 설치
+    - React Native 프로젝트를 위한 설정파일이 따로 없이 모두 셋업되어있음
+      - cf ) ReactJS의 `npx create-react-app Project_Name` 와 같은 역할 
+      - if ) React Native 를 수동작업하고 싶다면 ( = react native files를 컨트롤하고 싶다면), [React Native CLI](https://s-pace.github.io/react-native/docs/getting-started.html#the-react-native-cli) 참고 (추천하지는 않음)
+    - expo는 window에서 (MacOS가 없어도) IOS App 개발과 시뮬레이션을 가능케 해준다.
+
+##  사전지식 
+
+- CSS/HTML
+  - div, span, flexbox, display block, background color 가 뭔지 안다면 OK
+- 약간의 JS 
+  - function, variable, class 가 뭔지 안다면 OK
 
 
-##  전처리
+
+##  전처리 A 
+
+> React JS Project 시작을 위한 전처리
 
 - React를 사용하기 위해서는 
 - Sexy한 코드와 아름다운 Component를 만들어놓고도 
@@ -58,6 +102,36 @@
     - On Your Network : http:// 같은 wifi로 연결된 다른 디바이스에서 확인할 수 있는 url  
   - `npm run build `
   - etc.. 
+
+##  전처리 B 
+
+> React Native Project 시작을 위한 전처리 
+
+- cmd 창에서 (git bash 에서 불가)
+
+- 원하는 경로로 접근하여 `expo init proj-name` 
+
+- `blank` 옵션 선택 
+
+- 아래와 같이 앱이름을 설정한다. 
+
+  ```json
+    "expo": {
+      "name": "AppName",
+  ```
+
+  cmd 창에 뜨지 않으면, `app.json` 에서 설정할 수 있다. 
+
+###  시뮬레이션
+
+- `npm start`
+- QR코드 접속 / Local host 접속 
+  - IOS는 `expo login` 으로 우선 로그인 후 접속
+- PC와 시뮬용 디바이스는 같은 wifi에 연결되어있어야 한다. 
+- expo 시뮬레이터는 live reroad 된다!
+- 시뮬레이터에서 개발자 메뉴에 접근하려면 
+  - 가상 에뮬레이터 : Ctrl + D
+  - 물리 디바이스 : 흔들면 된다!!
 
 # React README 
 
