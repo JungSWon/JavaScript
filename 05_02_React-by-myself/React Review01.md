@@ -44,6 +44,8 @@
 
 ### 2. React Version 마다 지원하는 Browser
 
+####  (1) React와 Browser
+
 - 2016년 react.js의 IE 8 관련 버그의 우선 순위를 낮추고, 결국엔 지원을 중단할 것이라고 밝힘
 - `polyfill` 라이브러리를 사용하여 IE 지원 개발이 가능하긴 함 
 - [React.js가 IE 브라우저 지원 중단했다면서요?]([https://medium.com/little-big-programming/react-js%EA%B0%80-ie-%EB%B8%8C%EB%9D%BC%EC%9A%B0%EC%A0%80-%EC%A7%80%EC%9B%90-%EC%A4%91%EB%8B%A8%ED%96%88%EB%8B%A4%EB%A9%B4%EC%84%9C%EC%9A%94-a9734bc323cb#.qg3b5npl3](https://medium.com/little-big-programming/react-js가-ie-브라우저-지원-중단했다면서요-a9734bc323cb#.qg3b5npl3))
@@ -51,6 +53,18 @@
 - 글로벌 IE 이용률이 3.7%
 - 2020년 03월 부터 유투브가 실행되는 브라우저 : 구글 크롬, MS 엣지, 모질라 파이어폭스, 오페라
   - 위 브라우저들의 공통점 : 사용자에게 별도 재설치를 요구하지 않고 업데이트되는 ‘에버그린 브라우저’ 
+
+#### (2) React와 ECMAScript
+
+- 크롬, 사파리, 파이어폭스와 같은 에버그린 브라우저 (Evergreen browser, 사용자의 업데이트 없이도 최신 버전으로 자동 업데이트를 수행하는 모던 브라우저)의 ES6지원 비율은 약 98%로 거의 대부분의 ES6 사양을 구현
+- React는 ES6 문법으로 작성된다 (대표적으로 Map, Set )
+- IE를 포함한 구형 브라우저는 ES6 모듈을 지원하지 않는다
+- ES6+ 또는 ES NEXT의 ES 최신 사양을 사용하여 프로젝트를 진행하려면 작성된 코드를  IE 및 구형 브라우저에서 문제 없이 동작시켜야 하는경우, 개발 환경을 구축하는 것이 필요
+  - **Babel** ( :트랜스파일러(Transpiler)), **Webpack**( :모듈 번들러(Module bundler)) 등이 ES6 및 ES7 코드를 가져 와서 ES5 코드로 변환하는 역할 
+- 참고 
+  - [Babel과 Webpack을 이용한 ES6 환경 구축](https://poiemaweb.com/es6-babel-webpack-1)
+  - [React와 함께 ES6 및 ES * 사용](https://www.reactenlightenment.com/react-basic-setup/3.3.html)
+  - [JavaScript 환경 요구사항](https://ko.reactjs.org/docs/javascript-environment-requirements.html)
 
 
 
@@ -65,8 +79,6 @@ http://egloos.zum.com/chideout/v/4442783
 ### 4. iOS, Android with React Native 
 
 ####  (1) 카메라, 알람 등 디바이스 컨트롤 기능 호환율 (react native hardware access)
-
-
 
 ####  (2) React Native 코드 호환율 
 
@@ -112,8 +124,6 @@ http://egloos.zum.com/chideout/v/4442783
 
 
 
-
-
 ##  ✍
 
 ###  1. expo
@@ -122,7 +132,7 @@ http://egloos.zum.com/chideout/v/4442783
 
 -  SDK와 빌드 환경을 제공
 - 순수하게 자바스크립트와 React로만 개발하고 네이티브 개발은 미리 제공된 모듈만 사용하도록 함
-- 
+- https://meetup.toast.com/posts/191
 
 ####  (1) expo를 사용하는 이유
 
@@ -140,8 +150,6 @@ http://egloos.zum.com/chideout/v/4442783
 
 - [간단비교](https://hoony-gunputer.tistory.com/entry/expo-cli-Vs-react-native-cl)
 - [expo로 앱 개발 후기](https://medium.com/official-podo/expo로-앱-만들어본-후기-vs-vanilla-react-native-fc20c8dac937)
-- 
-- 
 
 
 
